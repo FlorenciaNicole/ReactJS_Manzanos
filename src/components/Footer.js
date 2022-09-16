@@ -1,6 +1,6 @@
 function Footer() {
     return (
-        <footer class="footer">
+        <footer className="Footer">
 <ul class="nav flex-column">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">Active</a>
