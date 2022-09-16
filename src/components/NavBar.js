@@ -1,3 +1,4 @@
+import CartWidget from "./CartWidget";
 
 
 function NavBar() {
@@ -5,7 +6,9 @@ function NavBar() {
         <nav className="NavBar">
 <ul class="nav nav-pills nav-fill">
   <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Active</a>
+    <a class="nav-link active" aria-current="page" href="#">
+    FlohrWedding
+    </a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#">Much longer nav link</a>
@@ -14,7 +17,9 @@ function NavBar() {
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
+    <CartWidget />
+    </a>
   </li>
 </ul>
 </nav>
