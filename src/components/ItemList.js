@@ -1,8 +1,8 @@
 import Item from "./Item";
 
-function ItemList({data = []}) {
+const ItemList = ({data = []}) => {
   return (
-    data.map(productos => <Item key={productos.id} info={productos} />)
+    data.map(producto => <Item key={producto.id} info={producto} />)
   );
 }
 

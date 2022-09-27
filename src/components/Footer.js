@@ -1,20 +1,34 @@
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import Nav from 'react-bootstrap/Nav';
+
 function Footer() {
     return (
-        <footer className="Footer">
-<ul class="nav flex-column">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Active</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-  </li>
-</ul>
+        <footer className="text-center Footer">
+<Card>
+      <Card.Footer>
+        <Nav variant="pills" defaultActiveKey="#first">
+          <Nav.Item>
+            <Nav.Link href="#first">Active</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="#link">Link</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="#disabled" disabled>
+              Disabled
+            </Nav.Link>
+          </Nav.Item>
+        </Nav>
+      </Card.Footer>
+      <Card.Body>
+        <Card.Title>Special title treatment</Card.Title>
+        <Card.Text>
+          With supporting text below as a natural lead-in to additional content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
 
 </footer>
     );

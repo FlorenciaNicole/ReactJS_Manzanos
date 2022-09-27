@@ -9,7 +9,7 @@ const productos = [
   {id: 3, image: "https://www.kleinfeldbridal.com/wp-content/uploads/2022/07/essense-of-australia-a-line-wedding-dress-with-v-neckline-and-bow-detail-34563148-400x580.jpg", title: "Essence of Australia"},
 ];
 
-function ItemListContainer(props) {
+export const ItemListContainer = ({texto}) => {
 
   const [data, setData] = useState ([]);
 
@@ -19,16 +19,15 @@ function ItemListContainer(props) {
       resolve (productos);
     }, 2000);
   });
-    getData.then(res => console.log(res));
+    getData.then(res => setData(res));
   }, [])
   
 
-  const onAdd = (quntity) => {
+  const onAdd = (quantity) => {
     console.log(`Compraste $(quantity) unidades`);
   }
   return (
     <>
-    <h1>{props.greeting}</h1>
     <ItemCount initial={1} stock={5} onAdd={onAdd} />
     <ItemList data={data} />
     </>
