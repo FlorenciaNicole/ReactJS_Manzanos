@@ -34,3 +34,9 @@ ul {
     width: 80px;
     height: 80px;
   }
+
+  .navCart{
+    float: right;
+    margin: 30px;
+    color: white;
+  }
