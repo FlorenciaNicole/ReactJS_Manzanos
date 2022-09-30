@@ -1,35 +1,10 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import Nav from 'react-bootstrap/Nav';
+import "./Footer.css"
 
 function Footer() {
     return (
-        <footer className="text-center Footer">
-<Card>
-      <Card.Footer>
-        <Nav variant="pills" defaultActiveKey="#first">
-          <Nav.Item>
-            <Nav.Link href="#first">Active</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href="#link">Link</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href="#disabled" disabled>
-              Disabled
-            </Nav.Link>
-          </Nav.Item>
-        </Nav>
-      </Card.Footer>
-      <Card.Body>
-        <Card.Title>Special title treatment</Card.Title>
-        <Card.Text>
-          With supporting text below as a natural lead-in to additional content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-
+      <footer>
+  <p>Florencia Nicole Manzanos - 2022</p>
+  <p><a href="mailto:flohrwedding@example.com">flohrwedding@example.com</a></p>
 </footer>
     );
 }
