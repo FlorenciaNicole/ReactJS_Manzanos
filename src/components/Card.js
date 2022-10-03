@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Card(props) {
   let { price, title, img, detail, id } = props;
 
-  const urlDetalle = `/vestidos/${id}`;
+  const urlDetalle = `/productos/${id}`;
 
   return (
     <div className="card">
