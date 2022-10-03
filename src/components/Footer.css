@@ -5,3 +5,8 @@ footer {
     background-color: #333;
     color: white;
   }
+
+  .mail a{
+    color: white;
+    text-decoration: none;
+  }
