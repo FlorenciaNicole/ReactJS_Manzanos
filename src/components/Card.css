@@ -21,6 +21,7 @@
     transition: all 0.20s ease-in;
     cursor: pointer;
     text-align: center;
+    display: inline-flex;
   }
   
   .card:hover{
