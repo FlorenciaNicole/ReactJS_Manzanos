@@ -1,14 +1,36 @@
 
-export const ItemDetail = ({data}) => {
+import React from "react";
+import FlexWrapper from "./FlexWrapper";
+import ItemCount from "./ItemCount";
+import {Link} from "react-router-dom"
+
+function ItemDetail({ course }) {
+  let estadoCart = false;
+
+  //Aparece el boton Finalizar compra
+  //let estadoCart = true;
+
+
+  function handleAddToCart(count) {
+    alert(`Agregaste al carrito! ${count}`);
+  }
+
   return (
-    <div className="container">
-      <div className="detail">
-        <img className="detail_image" scr={data.image} alt="" />
-        <div className="content">
-          <h1>{data.title}</h1>
-        </div>
+    <FlexWrapper rows={true}>
+      <div className="mainContainer">
+        <h1>{course.title}</h1>
+        <img src={course.img} alt={course.title} />
+        <h3>$ {course.price}</h3>
       </div>
-    </div>
+
+      {estadoCart === false? (
+        <ItemCount stock={5} onAddToCart={handleAddToCart} />
+      ) : (
+        <Link to="/Cart">
+        <button>Finalizar Compra</button>
+        </Link>
+      )}
+    </FlexWrapper>
   );
 }
 

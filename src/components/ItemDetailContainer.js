@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getSingleItem } from "../Service/mockAPI";
 import { useParams } from "react-router-dom";
+import ItemDetail from "./ItemDetail"
 
 function ItemDetailContainer() {
   let [data, setData] = useState({});
@@ -15,9 +16,7 @@ function ItemDetailContainer() {
   return (
     <div>
       <div className="mainContainer">
-        <h1>{data.title}</h1>
-        <img src={data.img} alt={data.title} />
-        <h3>$ {data.price}</h3>
+        <ItemDetail course={data} />
       </div>
     </div>
   );}
