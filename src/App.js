@@ -4,6 +4,9 @@ import Footer from "./components/Footer";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import CartContextProvider from "./CartContext";
+
 
 function App() {
 
@@ -16,6 +19,7 @@ function App() {
       <Route path="/productos/:id" element={<ItemDetailContainer />} />
       </Routes>
       <Footer />
+      <CartContextProvider>
       </BrowserRouter>
 
   );
