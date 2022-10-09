@@ -34,7 +34,7 @@ export default function CartContextProvider({ children }) {
   }
 
   return (
-    //3. pasamos el objeto Value a los componentes hijos
+
     <cartCtx.Provider value={{ cart, addItem, getTotalItemsInCart, isInCart }}>
       {children}
     </cartCtx.Provider>
