@@ -3,7 +3,7 @@ const data = [
       id: 1,
       title: "Rivini",
       price: 4500,
-      stock: 6,
+      stock: 0,
       category: "vestidos",
       detail:
         "VESTIDO DE NOVIA ENTALLADO Y CON VUELO DE ENCAJE FLORAL 3D CON MANGAS LARGAS",
@@ -11,6 +11,7 @@ const data = [
     },
     {
       id: 2,
+      offer: true,
       title: "Essence Of Australia",
       price: 1500,
       detail:

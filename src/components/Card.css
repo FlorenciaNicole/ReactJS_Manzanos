@@ -36,3 +36,12 @@
   small{
     color: #8c8c8e;
   }
+
+  .priceTag{
+    color:brown;
+    font-weight: bold;
+  }
+
+.offerTag{
+  color:aqua;
+}

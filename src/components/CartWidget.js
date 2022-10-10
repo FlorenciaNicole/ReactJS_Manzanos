@@ -8,7 +8,7 @@ function CartWidget() {
   return (
     <div>
         <LocalMallIcon />
-        <span>{getTotalItemsInCart()}</span>
+        <span>{getTotalItemsInCart() > 0 && getTotalItemsInCart()}</span>
     </div>
   )
 }
