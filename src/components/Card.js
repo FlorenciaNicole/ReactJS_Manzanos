@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Card(props) {
   let { price, offer, title, img, detail, id } = props;
 
-  const urlDetalle = `/producto/${id}`;
+  const urlDetalle = `/productos/${id}`;
   let classPrice = `priceTag ${offer && "offerTag"}`;
 
   return (
@@ -17,7 +17,6 @@ function Card(props) {
       <div className="card-detail">
         <h3>{title}</h3>
         <p>{detail}</p>
-        <h4>$ {price}</h4>
         <h4 className={classPrice}>$ {price}</h4>
       </div>
       <Link to= {urlDetalle}>
