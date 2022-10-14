@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Card from "./Card";
 import { useParams } from "react-router-dom";
-import getItems, { getItemsByCategory } from "../Service/mockAPI";
+import { getItems, getItemsByCategory } from "../Service/firestore";
 import { LineWobble } from '@uiball/loaders'
 
 function ItemListContainer() {
@@ -17,9 +17,10 @@ function ItemListContainer() {
         .then((respuestaDatos) => setData(respuestaDatos))
         .finally(() => setIsLoading(false));
       } else {
-        getItemsByCategory(cat)
-          .then((respuestaDatos) => setData(respuestaDatos))
-          .finally(() => setIsLoading(false));
+        getItemsByCategory(cat).then((respuestaDatosFiltrados) =>
+        setData(respuestaDatosFiltrados)
+      )
+      .finally(() => setIsLoading(false));
       }
       return () => {
         console.log("Componente Item List desmontado");

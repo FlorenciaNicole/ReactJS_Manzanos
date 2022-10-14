@@ -3,7 +3,7 @@ const data = [
       id: 1,
       title: "Rivini",
       price: 4500,
-      stock: 0,
+      stock: 1,
       category: "vestidos",
       detail:
         "VESTIDO DE NOVIA ENTALLADO Y CON VUELO DE ENCAJE FLORAL 3D CON MANGAS LARGAS",

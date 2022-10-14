@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getSingleItem } from "../Service/mockAPI";
+import { getSingleItem } from "../Service/firestore";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail"
 import { LineWobble } from '@uiball/loaders'
