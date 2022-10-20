@@ -11,14 +11,13 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDBx9y-jVCCDfXsM1HTWun-RkVl2UBoHSk",
-  authDomain: "react37555.firebaseapp.com",
-  projectId: "react37555",
-  storageBucket: "react37555.appspot.com",
-  messagingSenderId: "957237227085",
-  appId: "1:957237227085:web:cbb37e6cb5c2186e74b604",
+  apiKey: "AIzaSyCOAQ6QJkdj5xkIG5hiYkZ_sR3qWGSsy7k",
+  authDomain: "flohrwedding-357a2.firebaseapp.com",
+  projectId: "flohrwedding-357a2",
+  storageBucket: "flohrwedding-357a2.appspot.com",
+  messagingSenderId: "835544742705",
+  appId: "1:835544742705:web:6b265ccafb8de13b7ece10"
 };
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const firestore = getFirestore(app);
