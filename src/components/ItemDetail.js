@@ -1,7 +1,6 @@
-
+import React, { useState, useContext } from "react";
 import FlexWrapper from "./FlexWrapper";
 import ItemCount from "./ItemCount";
-import { useContext, useState } from "react";
 import { cartCtx } from "./CartContext";
 import { Link } from "react-router-dom";
 

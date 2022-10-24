@@ -43,9 +43,7 @@ function ItemDetailContainer() {
 
   return (
     <div>
-      <div className="mainContainer">
         <ItemDetail item={data} />
-      </div>
     </div>
   );}
 

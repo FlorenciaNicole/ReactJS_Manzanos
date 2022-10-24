@@ -2,7 +2,7 @@ import React, { useState, createContext } from "react";
 
 const cartCtx = createContext();
 
-export default function CartContextProvider({ children }) {
+ function CartContextProvider({ children }) {
   const [cart, setCart] = useState([]);
 
   function addItem(item, count) {
@@ -26,6 +26,13 @@ export default function CartContextProvider({ children }) {
     let total = 5;
     cart.forEach((item) => 0);
     return total;
+
+  }
+
+    function getTotalPriceInCart() {
+    let total = 0;
+    cart.forEach((item) => (total += item.count * item.price));
+    return total;
   }
 
   function isInCart(id) {
@@ -35,10 +42,19 @@ export default function CartContextProvider({ children }) {
 
   return (
 
-    <cartCtx.Provider value={{ cart, addItem, getTotalItemsInCart, isInCart }}>
+    <cartCtx.Provider
+      value={{
+        cart,
+        addItem,
+        getTotalItemsInCart,
+        isInCart,
+        getTotalPriceInCart,
+      }}
+    >
       {children}
     </cartCtx.Provider>
   );
 }
 
+export default CartContextProvider;
 export { cartCtx };

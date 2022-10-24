@@ -1,20 +1,21 @@
 import { useState } from "react";
 import "./Button.css";
 
-function Button({ children }) {
+function Button(props) {
   let [color, setColor] = useState("grey");
 
   function handleClick() {
+    props.onClick && props.onClick();
     setColor("grey");
   }
 
   return (
     <button
-      style={{ backgroundColor: color }}
       onClick={handleClick}
+      style={{ backgroundColor: color }}
       className="btn"
     >
-      {children}
+      {props.children}
     </button>
   );
 }

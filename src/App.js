@@ -6,11 +6,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CartContextProvider from "./components/CartContext";
 import CartView from "./components/CartView";
-
-import app from "./Service/firestore";
-
-
-
+import Checkout from "./components/Checkout";
 
 
 function App() {
@@ -23,10 +19,11 @@ function App() {
       <Route path="/" element={<ItemListContainer />} />
       <Route path="/categoria/:cat" element={<ItemListContainer />}></Route>
       <Route path="/productos/:id" element={<ItemDetailContainer />} />
-      <Route path="/cart/" element={<CartView />} />
+      <Route path="/cart" element={<CartView />} />
+      <Route path="/checkout/:orderid" element={<Checkout />} />
+      <Route path="*" element={<h1>404: Te perdiste. 🤔</h1>} />
       </Routes>
       <Footer />
-      <CartContextProvider />
       </BrowserRouter>
       </CartContextProvider>
 

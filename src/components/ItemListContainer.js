@@ -22,9 +22,6 @@ function ItemListContainer() {
       )
       .finally(() => setIsLoading(false));
       }
-      return () => {
-        console.log("Componente Item List desmontado");
-      };
     }, [cat]);
 
   return (
