@@ -3,12 +3,12 @@ import React, { useContext } from "react";
 import { cartCtx } from "./CartContext";
 
 function CartWidget() {
-  const { getTotalItemsInCart } = useContext(cartCtx);
+  const { getItemQty } = useContext(cartCtx);
 
   return (
     <div>
         <LocalMallIcon />
-        <span>{getTotalItemsInCart() > 0 && getTotalItemsInCart()}</span>
+        <span>{getItemQty()}</span>
     </div>
   )
 }

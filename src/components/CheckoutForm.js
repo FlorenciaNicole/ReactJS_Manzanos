@@ -18,7 +18,7 @@ function CheckoutForm() {
 
   function handleCheckout(event) {
     event.preventDefault();
-    /* { buyer: { name, phone, email }, items: [{id, title, price}], total  } */
+
     const orderData = {
       buyer: dataForm,
       items: cart,
@@ -77,7 +77,7 @@ function CheckoutForm() {
             required
           />
         </div>
-        <Button type="submit">Finalizar Compra</Button>
+        <Button type="submit" onClick={handleCheckout}>Finalizar Compra</Button>
       </form>
     </div>
   );

@@ -29,7 +29,7 @@ function ItemDetail({ item }) {
         <span style={{ color: "#aa0033" }}>Producto sin stock</span>
       )}
       {isInCart ? (
-        <Link to="/cart">Ir al carrito</Link>
+        <Link to="/cart" >Ir al carrito</Link>
       ) : (
         <ItemCount stock={5} onAddToCart={handleAddToCart} />
       )}

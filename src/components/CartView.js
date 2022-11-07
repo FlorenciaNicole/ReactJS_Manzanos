@@ -3,11 +3,11 @@ import { cartCtx } from "./CartContext";
 import Button from "./Button";
 import "./CartView.css";
 import CheckoutForm from "./CheckoutForm";
-import {createBuyOrder} from "../Service/firestore"
+import { Link } from 'react-router-dom';
 
 function CartView() {
   const context = useContext(cartCtx);
-  const { cart, clearCart, removeFromCart, getTotalPriceInCart } = context;
+  const { cart, getTotalPriceInCart, deleteItem, emptyCart } = context;
 
   let carritovacio = cart.length === 0;
 
@@ -15,22 +15,12 @@ function CartView() {
     return <div>Tu carrito está vacio...</div>;
   }
 
-  function handleCheckout() {
-  const orderData = {
-    buyer: {
-      name: 'Florencia',
-      phone: '1122334455',
-      email: 'manzanos@hotmail.com'
-    },
-    items: cart,
-    total: getTotalPriceInCart(),
-  };
-  createBuyOrder(orderData);
-}
-
   return (
     <>
-      <h1 className='carritoTitle'>Carrito de compras</h1>
+    <div>
+      <h1 className='carritoTitle'>Tu carrito</h1>
+      <Button onClick={emptyCart} className="title">Borrar todo</Button>
+            </div>
       <table className="cartList">
         <thead className="cartList_head">
           <tr className="cartList_row">
@@ -38,7 +28,7 @@ function CartView() {
             <th>Titulo</th>
             <th>Precio</th>
             <th>Cantidad</th>
-            <th>ELiminar</th>
+            <th>Eliminar</th>
             <th>Total</th>
           </tr>
         </thead>
@@ -47,13 +37,13 @@ function CartView() {
             return (
               <tr key={item.id} className="cartList_row">
                 <td>
-                  <img height={50} src={item.img} alt={item.title} />
+                  <img height={100} src={item.img} alt={item.title} />
                 </td>
                 <td>{item.title}</td>
                 <td>$ {item.price}</td>
                 <td>{item.count}</td>
                 <td>
-                  <Button onClick={item.removeItem}>ELIMINAR</Button>
+                  <Button onClick={() => deleteItem(item.id)}>ELIMINAR</Button>
                 </td>
                 <th>$ {item.price * item.count}</th>
               </tr>
@@ -62,6 +52,7 @@ function CartView() {
         </tbody>
       </table>
       <h3>El total de tu compra es de $ {getTotalPriceInCart()}</h3>
+      <Link to="/">Seguir comprando</Link>
       <CheckoutForm />
     </>
   );

@@ -14,7 +14,7 @@ function NavBar() {
   <li><Link to='/categoria/accesorios'>Accesorios</Link></li>
   <li className="navRight"><Link to='/contacto'>Contacto</Link></li>
   <li className="navRight"><Link to='/nosotros'>Nosotros</Link></li>
-  <li className="navCart"><CartWidget /></li>
+  <li className="navCart"><Link to='/cart'><CartWidget /></Link></li>
 </ul>
 	</nav>
   );

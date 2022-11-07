@@ -23,22 +23,37 @@ const cartCtx = createContext();
   }
 
   function getTotalItemsInCart() {
-    let total = 5;
-    cart.forEach((item) => 0);
+    let total = 0; 
+    cart.reduce((acc, data) => acc += data.qty, 0);
     return total;
 
   }
 
-    function getTotalPriceInCart() {
+function getItemQty () {
+  let total = 0; 
+  cart.reduce((acc, data) => acc += data.qty, 0);
+  return total;
+};
+
+function getTotalPriceInCart() {
     let total = 0;
     cart.forEach((item) => (total += item.count * item.price));
     return total;
-  }
+}
 
-  function isInCart(id) {
-    let found = cart.some((item) => item.id === id);
+function isInCart(id) {
+    let found = cart.some(item => item.id === id)
     return found;
-  }
+}
+
+const emptyCart = () => {
+    return setCart([])
+}
+
+
+const deleteItem = (id) => {
+    return setCart(cart.filter(item => item.id !== id))
+}
 
   return (
 
@@ -46,9 +61,12 @@ const cartCtx = createContext();
       value={{
         cart,
         addItem,
+        getItemQty,
         getTotalItemsInCart,
         isInCart,
         getTotalPriceInCart,
+        emptyCart,
+        deleteItem
       }}
     >
       {children}

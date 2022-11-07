@@ -8,7 +8,7 @@
   .cartList_head{
     background-image: linear-gradient(to bottom,
     white,
-    aquamarine);
+    rgb(113, 191, 255));
   }
   
   .cartList_row{
