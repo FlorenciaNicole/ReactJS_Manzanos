@@ -30,7 +30,7 @@ $ git clone https://github.com/FlorenciaNicole/ReactJS_Manzanos
 npm install
 ```
 
-### 3. Run he APP
+### 3. Run the APP
 
 ```
 npm start
