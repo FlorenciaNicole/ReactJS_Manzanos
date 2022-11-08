@@ -6,7 +6,7 @@ Es un e-commerce realizado con el curso de ReactJs en Coderhouse.
 
 ![](./public/Gif_FlohrWedding.gif)
 
-## Lenguajes de progamacion utilizados
+## Lenguajes de programacion utilizados
 
 - HTML
 - CSS
